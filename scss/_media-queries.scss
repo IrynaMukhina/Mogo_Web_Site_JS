@@ -1,0 +1,392 @@
+/* MEDIA FOR LARGE SCREEN */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 75%;
+
+    &__heading {
+      height: 70px;
+    }
+
+    &__subtitle {
+      font-size: 1.2em;
+    }
+
+    &__title {
+      font-size: 1.4em;
+    }
+
+    &__logo {
+      width: 20%;
+    }
+
+    &__contacts {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      &_follow {
+        width: 49%;
+      }
+
+      &_contact {
+        flex-direction: column;
+        display: flex;
+        width: 49%;
+      }
+    }
+
+    &__footer-blog,
+    &__instagram {
+      flex-direction: column;
+      justify-content: flex-start;
+      display: flex;
+      width: 50%;
+      height: 250px;
+
+      .text {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .wrapper {
+    &__blog {
+      &_footer {
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &__follow,
+    &__form {
+      width: 100%;
+    }
+  }
+
+  .header {
+    .container__subtitle {
+      font-size: 2.6em;
+    }
+
+    .container__title {
+      font-size: 5em;
+    }
+  }
+
+  .navigation {
+    justify-content: space-between;
+    width: 80%;
+
+    &__menu {
+      justify-content: space-between;
+      font-family: $mainRegularFont;
+    }
+  }
+
+  .slider {
+    &__item {
+      .text_title {
+        font-size: 0.5em;
+      }
+    }
+  }
+
+  .infograph {
+    .numbers {
+      font-size: 3em;
+    }
+  }
+
+  .btn {
+    &__arrow {
+      &_prev {
+        left: 5%;
+      }
+  
+      &_next {
+        right: 5%;
+      }
+    }
+  }
+
+  .client {
+    &__photo {
+      height: 60px;
+    }
+  }
+
+  .footer {
+    flex-wrap: wrap;
+
+    .info {
+      padding-right: 15px;
+    }
+
+    .picture {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .blog {
+    &_view_number {
+      font-size: 0.7em;
+    }
+  }
+}
+/* MEDIA FOR MEDIUM SCREEN */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+
+    &__logo {
+      width: 10%;
+    }
+
+    &__heading {
+      height: 60px;
+    }
+
+    &__subtitle {
+      font-size: 1em;
+    }
+
+    &__title {
+      font-size: 1.2em;
+    }
+    
+    &__logos {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  .header {
+    .container__subtitle {
+      font-size: 2em;
+    }
+    
+    .container__title {
+      font-size: 3.6em;
+    }
+  }
+
+  .navigation {
+    justify-content: flex-end;
+    width: 90%;
+  }
+  
+  .logos {
+    margin: 0;
+  }
+  
+  .logotype {
+    width: 30%;
+  }
+  
+  .picture {
+    &_round {
+      height: 100px;
+    }
+  }
+  
+  .footer {
+    .picture {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  
+  .btn {
+    &__arrow {
+      &_prev {
+        left: 2%;
+      }
+  
+      &_next {
+        right: 2%;
+      }
+    }
+  }
+  
+  .icon {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .quote {
+    font-size: 1em;
+  }
+
+}
+/* MEDIA FOR SMALL SCREEN */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 85%;
+    
+    &__heading {
+      height: 70px;
+    }
+    
+    &__subtitle {
+      font-size: 1.2em;
+    }
+    
+    &__title {
+      font-size: 1.4em;
+    }
+    
+    &__contacts {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      
+      &_follow {
+        width: 100%;
+      }
+      
+      &_contact {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    
+    &__footer-blog,
+    &__instagram {
+      width: 100%;
+    }
+
+    &__activity {
+      flex-direction: column;
+
+      .picture {
+        width: 100%;
+      }
+    }
+    
+    &__blog {
+      flex-direction: column;
+    }
+    
+    &__sample {
+      flex-wrap: wrap;
+    }
+
+    &__employee {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .wrapper {
+    &__activity {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    &__sample {
+      width: 50%;
+    }
+
+    &__view {
+      margin-bottom: 20px;
+
+      .icon {
+        width: 20px;
+        height: 15px;
+      }
+    }
+
+    &__date {
+      width: 60px;
+      height: 70px;
+    }
+  }
+
+  .blog {
+    width: 100%;
+
+    &_view_number {
+      font-size: 1em;
+    }
+  }
+  
+  .header {
+    .container__subtitle {
+      font-size: 1.8em;
+    }
+    
+    .container__title {
+      font-size: 3em;
+    }
+  }
+  
+  .navigation {
+    justify-content: flex-end;
+    width: 40%;
+
+    &__menu {
+      padding-left: 20px;
+    }
+  }
+  
+  .menu__item {
+    display: none;
+  }
+  
+  .slider {
+    &__item {
+      .text_title {
+        font-size: 0.4em;
+      }
+      
+      .numbers {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .infograph {
+    .numbers {
+      font-size: 2.5em;
+    }
+
+    .text {
+      font-size: 0.5em;
+    }
+  }
+
+  .employee {
+    width: 70%;
+  }
+
+  .clients-say {
+    padding: 60px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+
+    .picture {
+      width: 25%;
+    }
+  }
+
+  .client {
+    width: 100%;
+  }
+
+  .picture {
+    &_hiden {
+      display: inline;
+    }
+
+    &_round {
+      height: 70px;
+    }
+  }
+
+  .fab {
+    padding: 15px;
+  }
+}
