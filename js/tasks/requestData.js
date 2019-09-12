@@ -37,7 +37,7 @@ function fillInformation(from, to, key) {
   }
 }
 
-const requestData = ( function(){
+const requestData = ( function() {
   const init = () => {
     const URI = 'http://localhost:3000/api/blogs';
 
@@ -45,18 +45,18 @@ const requestData = ( function(){
       blogArr.forEach((el) =>
         fillInformation(data.blogs, el[1], el[0]));
     };
-  
+
     fetch(URI)
-    .then((res) => res.json())
-    .then((myJson) => {
-      callback(JSON.parse(JSON.stringify(myJson)));
-    })
-    .catch((err) => console.error(err));
-  }
+        .then((res) => res.json())
+        .then((myJson) => {
+          callback(JSON.parse(JSON.stringify(myJson)));
+        })
+        .catch((err) => console.error(err));
+  };
 
   return {
     init,
-  }
+  };
 }());
 
 export default requestData;

@@ -1,4 +1,8 @@
 /* eslint-disable max-len */
+import changeClass from '../modules/changeClass.js';
+
+const handler = changeClass();
+
 const openActivity = (function() {
   const activities = {
     'photography': {
@@ -25,26 +29,20 @@ const openActivity = (function() {
 
       if (openBtnList.length) {
         openBtnList.forEach((el) => {
-          el.classList.remove('btn__arrow_open');
-          el.classList.add('btn__arrow_close');
+          handler.toggleClass(el, 'btn__arrow_close', 'btn__arrow_open');
         });
 
         descriptionList.forEach((el) => {
-          el.classList.remove('activity__description_open');
-          el.classList.add('activity__description_close');
+          handler.toggleClass(el, 'activity__description_close', 'activity__description_open');
         });
       }
 
-      this.classList.remove('btn__arrow_close');
-      this.classList.add('btn__arrow_open');
-      description.classList.remove('activity__description_close');
-      description.classList.add('activity__description_open');
+      handler.toggleClass(this, 'btn__arrow_open', 'btn__arrow_close');
+      handler.toggleClass(description, 'activity__description_open', 'activity__description_close');
       pic.src = activities[[...this.parentNode.children][1].innerHTML].img;
     } else {
-      this.classList.remove('btn__arrow_open');
-      this.classList.add('btn__arrow_close');
-      description.classList.remove('activity__description_open');
-      description.classList.add('activity__description_close');
+      handler.toggleClass(this, 'btn__arrow_close', 'btn__arrow_open');
+      handler.toggleClass(description, 'activity__description_close', 'activity__description_open');
     }
   }
 

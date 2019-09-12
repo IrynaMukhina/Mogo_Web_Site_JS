@@ -1,19 +1,18 @@
 // TASK 5
-import scrollChange from './modules/scrollChange.js';
+import scrollChange from './tasks/scrollChange.js';
 
 // TASK 6
-import openActivity from './modules/openActivity.js';
+import openActivity from './tasks/openActivity.js';
 
 // TASK 7
-import carousel from './modules/carousel.js';
+import carousel from './tasks/carousel.js';
 
 // TASK 8
-import popUpWindow from './modules/popUpWindow.js';
+import popUpWindow from './tasks/popUpWindow.js';
 
 // TASK 9
-import requestData from './modules/requestData.js';
+import requestData from './tasks/requestData.js';
 
-// Use modules
 document.addEventListener('DOMContentLoaded', function() {
   window.onscroll = function() {
     scrollChange.init();

@@ -1,14 +1,16 @@
 /* eslint-disable max-len */
+import changeClass from '../modules/changeClass.js';
+
+const handler = changeClass();
+
 const scrollChange = (function() {
   const init = () => {
     const navigation = document.getElementById('nav');
 
     if (document.body.scrollTop >= 50 || document.documentElement.scrollTop > 50 ) {
-      navigation.classList.add('navigation_dark');
-      navigation.classList.remove('navigation_transparent');
+      handler.toggleClass(navigation, 'navigation_dark', 'navigation_transparent');
     } else {
-      navigation.classList.add('navigation_transparent');
-      navigation.classList.remove('navigation_dark');
+      handler.toggleClass(navigation, 'navigation_transparent', 'navigation_dark');
     }
   };
 

@@ -44,11 +44,11 @@ const carousel = ( function() {
     document.getElementById('prev_bottom').addEventListener('click', function() {
       plusSlides(-1, 1);
     });
-  }
+  };
 
   return {
     init,
-  }
+  };
 }());
 
 export default carousel;
