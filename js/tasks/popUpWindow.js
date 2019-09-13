@@ -4,8 +4,10 @@ const popUpWindow = (function() {
   const modalPicture = document.getElementById('picture__modal');
 
   function openModalWindow() {
+    const selectedPicture = this.children[0];
+
     modalWindow.style.display = 'flex';
-    modalPicture.src = this.children[0].src;
+    modalPicture.src = selectedPicture.src;
     document.body.style.overflow = 'hidden';
   }
 

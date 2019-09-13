@@ -20,11 +20,11 @@ const openActivity = (function() {
   const pic = document.getElementById('activity_picture');
 
   function openDescription() {
-    const open = !this.classList.contains('btn__arrow_open');
+    const open = this.classList.contains('btn__arrow_open');
     const description = this.parentNode.parentNode.children[1];
     const descriptionList = [...document.querySelectorAll('.activity__description_open')];
 
-    if (open) {
+    if (!open) {
       const openBtnList = [...document.querySelectorAll('.btn__arrow_open')];
 
       if (openBtnList.length) {

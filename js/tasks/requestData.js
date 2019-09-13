@@ -41,7 +41,7 @@ const requestData = ( function() {
   const init = () => {
     const URI = 'http://localhost:3000/api/blogs';
 
-    const callback = (data) => {
+    const fillInfoForAll = (data) => {
       blogArr.forEach((el) =>
         fillInformation(data.blogs, el[1], el[0]));
     };
@@ -49,7 +49,7 @@ const requestData = ( function() {
     fetch(URI)
         .then((res) => res.json())
         .then((myJson) => {
-          callback(JSON.parse(JSON.stringify(myJson)));
+          fillInfoForAll(JSON.parse(JSON.stringify(myJson)));
         })
         .catch((err) => console.error(err));
   };
