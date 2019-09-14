@@ -8,7 +8,7 @@ const blogPicture = [...document.querySelectorAll('.blog_picture'),
   ...document.querySelectorAll('.blog_footer_picture')];
 const blogDate = [...document.querySelectorAll('.blog_published')];
 
-const keysObj = {
+const blogPareObject = {
   'title': blogHeadings,
   'description': blogsText,
   'comments': blogComments,
@@ -17,7 +17,7 @@ const keysObj = {
   'published': blogDate,
 };
 
-const blogArr = Object.entries(keysObj);
+const blogPareArray = Object.entries(blogPareObject);
 
 function fillInformation(from, to, key) {
   const toLength = to.length;
@@ -42,7 +42,7 @@ const requestData = ( function() {
     const URI = 'http://localhost:3000/api/blogs';
 
     const fillInfoForAll = (data) => {
-      blogArr.forEach((el) =>
+      blogPareArray.forEach((el) =>
         fillInformation(data.blogs, el[1], el[0]));
     };
 

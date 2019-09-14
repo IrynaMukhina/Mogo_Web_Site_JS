@@ -16,13 +16,14 @@ const openActivity = (function() {
     },
   };
 
-  const arrowBtn = [...document.querySelectorAll('.btn__arrow')];
-  const pic = document.getElementById('activity_picture');
+  const arrowBtnArray = [...document.querySelectorAll('.btn__arrow')];
+  const picture = document.getElementById('activity_picture');
 
   function openDescription() {
     const open = this.classList.contains('btn__arrow_open');
-    const description = this.parentNode.parentNode.children[1];
     const descriptionList = [...document.querySelectorAll('.activity__description_open')];
+    const description = this.parentNode.parentNode.children[1];
+    const activityTitle = [...this.parentNode.children][1];
 
     if (!open) {
       const openBtnList = [...document.querySelectorAll('.btn__arrow_open')];
@@ -39,7 +40,7 @@ const openActivity = (function() {
 
       handler.toggleClass(this, 'btn__arrow_open', 'btn__arrow_close');
       handler.toggleClass(description, 'activity__description_open', 'activity__description_close');
-      pic.src = activities[[...this.parentNode.children][1].innerHTML].img;
+      picture.src = activities[activityTitle.innerHTML].img;
     } else {
       handler.toggleClass(this, 'btn__arrow_close', 'btn__arrow_open');
       handler.toggleClass(description, 'activity__description_close', 'activity__description_open');
@@ -47,7 +48,7 @@ const openActivity = (function() {
   }
 
   const init = () => {
-    arrowBtn.forEach((el) => el.addEventListener('click', openDescription));
+    arrowBtnArray.forEach((el) => el.addEventListener('click', openDescription));
   };
 
   return {
