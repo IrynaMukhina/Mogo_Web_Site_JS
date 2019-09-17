@@ -33,6 +33,10 @@ function fillInformation(from, to, key) {
 
     if (key === 'previewImg') {
       to[i].src = from[i][key];
+
+      if (to[i].classList.contains('blog_picture')) {
+        to[i].style.height = '210px';
+      }
     }
   }
 }
